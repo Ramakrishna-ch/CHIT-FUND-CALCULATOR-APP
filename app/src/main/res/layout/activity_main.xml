@@ -131,9 +131,9 @@
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="clear"
+                android:text="HISTORY"
                 android:textSize="23sp"
-                android:id="@+id/clear"
+                android:id="@+id/histoy_but"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="36dp"
                 android:padding="10dp"
