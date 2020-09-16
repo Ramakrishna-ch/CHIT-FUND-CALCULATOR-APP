@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int auction;
     EditText auction_edit;
     int bit;
+
     TextView bit_edit;
     Button button_calc;
     Spinner chit_edit;
@@ -30,9 +31,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int members;
     String report;
     String reportend;
+    String mesStr;
     int temp_pay;
     int total_amount;
     Button historybut;
+    Button send;
 
     //history variable history actovity
 
@@ -44,10 +47,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         Spinner chit_edit = (Spinner) findViewById(R.id.chit_amount);
         final EditText auction_edit = (EditText) findViewById(R.id.auction_amount);
-        Spinner mem_edit = (Spinner) findViewById(R.id.members);
+        final Spinner mem_edit = (Spinner) findViewById(R.id.members);
         final TextView bit_edit = (TextView) findViewById(R.id.bit_amount);
         Button button_calc = (Button) findViewById(R.id.calculate);
         Button historybut = (Button) findViewById(R.id.histoy_but);
+        Button send = (Button) findViewById(R.id.send);
+
 
         // spinner for chit amount
 
@@ -68,31 +73,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         button_calc.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                if (auction_edit != null) {
-                    int auction_amount;
-                    auction_amount = Integer.valueOf(auction_edit.getText().toString()).intValue();
-                    auction = auction_amount;
-                    switch (total_amount) {
-                        case 100000:
-                            bit = 3000;
-                            break;
-                        case 50000:
-                            bit = 1500;
-                            break;
-                        case 200000:
-                            bit = 6000;
-                            break;
-                        case 20000:
-                            bit = 600;
-                            break;
-                    }
-                    bit_edit.setText("" + bit);
-                    int payc = pay_calc();
-                    summary(payc);
-                } else {
-                    Toast.makeText(this, "Please enter the Auction amount").show();
-                }
+                String auctcheck = auction_edit.getText().toString();
+                    if (!auctcheck.isEmpty()) {
+                        int auction_amount;
+                        auction_amount = Integer.valueOf(auction_edit.getText().toString()).intValue();
+                        auction = auction_amount;
+                        switch (total_amount) {
+                            case 300000:
+                                bit = 9000;
+                                break;
+                            case 100000:
+                                bit = 3000;
+                                break;
+                            case 50000:
+                                bit = 1500;
+                                break;
+                            case 200000:
+                                bit = 6000;
+                                break;
+                            case 20000:
+                                bit = 600;
+                                break;
+                        }
+                        bit_edit.setText(" " + bit);
+                        int payc = pay_calc();
+                        summary(payc);
+                    } else {
 
+                        Toast toast = Toast.makeText(MainActivity.this, "Please enter the Auction amount", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
 
             }
         });
@@ -100,6 +110,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),History.class);
                 startActivity(i);
+            }
+        });
+
+        send.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mesStr == null){
+                    Toast.makeText(getApplicationContext(), "NO calculation done!", Toast.LENGTH_LONG).show();
+
+                }
+                else {
+                    Intent intent = new Intent(getApplicationContext(), Message.class);
+                    intent.putExtra("message-key", mesStr);
+                    startActivity(intent);
+                }
+
             }
         });
     }
@@ -117,6 +143,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
                 case 3: total_amount = 20000;
                     break;
+                case 4: total_amount = 300000;
+                break;
             }
         }
         else if( parent.getId() == R.id.members){
@@ -173,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         report_view.setText(report);
         reportend_view.setText(reportend);
         history.add(str + str2);
+        mesStr = str + str2;
     }
 
 
