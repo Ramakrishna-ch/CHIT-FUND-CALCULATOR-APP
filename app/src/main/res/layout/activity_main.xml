@@ -27,13 +27,21 @@
                 android:paddingTop="16dp"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
+<<<<<<< HEAD
                 android:textSize="18sp"/>
+=======
+                android:textSize="23sp"/>
+>>>>>>> master
 
             <Spinner
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:paddingTop="16dp"
+<<<<<<< HEAD
                 android:textSize="21sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:id="@+id/chit_amount"/>
 
         </LinearLayout>
@@ -51,13 +59,21 @@
                 android:paddingTop="16dp"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
+<<<<<<< HEAD
                 android:textSize="18sp"/>
+=======
+                android:textSize="23sp"/>
+>>>>>>> master
 
             <Spinner
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:paddingTop="16dp"
+<<<<<<< HEAD
                 android:textSize="21sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:id="@+id/members"/>
 
         </LinearLayout>
@@ -75,6 +91,7 @@
                 android:paddingTop="16dp"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
+<<<<<<< HEAD
                 android:textSize="18sp"/>
 
             <EditText
@@ -84,6 +101,16 @@
                 android:hint="Enter the auction"
                 android:paddingTop="16dp"
                 android:textSize="21sp" />
+=======
+                android:textSize="23sp"/>
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingTop="16dp"
+                android:textSize="23sp"
+                android:id="@+id/auction_amount"/>
+>>>>>>> master
 
         </LinearLayout>
 
@@ -101,13 +128,21 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="36dp"
                 android:textStyle="bold"
+<<<<<<< HEAD
                 android:textSize="18sp"/>
+=======
+                android:textSize="23sp"/>
+>>>>>>> master
 
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:paddingTop="16dp"
+<<<<<<< HEAD
                 android:textSize="21sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:id="@+id/bit_amount"/>
 
         </LinearLayout>
@@ -122,7 +157,11 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="calculate"
+<<<<<<< HEAD
                 android:textSize="20sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:id="@+id/calculate"
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="36dp"
@@ -132,9 +171,15 @@
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+<<<<<<< HEAD
                 android:text="HISTORY"
                 android:textSize="20sp"
                 android:id="@+id/histoy_but"
+=======
+                android:text="clear"
+                android:textSize="23sp"
+                android:id="@+id/clear"
+>>>>>>> master
                 android:layout_marginTop="16dp"
                 android:layout_marginLeft="36dp"
                 android:padding="10dp"
@@ -155,7 +200,11 @@
                 android:text="REPORT:"
                 android:paddingLeft="16dp"
                 android:textStyle="bold"
+<<<<<<< HEAD
                 android:textSize="20sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:textColor="@color/black"/>
 
             <TextView
@@ -163,20 +212,29 @@
                 android:layout_width="wrap_content"
                 android:text="0"
                 android:paddingLeft="16dp"
+<<<<<<< HEAD
                 android:textSize="20sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:id="@+id/report"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:paddingLeft="16dp"
+<<<<<<< HEAD
                 android:textSize="20sp"
+=======
+                android:textSize="23sp"
+>>>>>>> master
                 android:id="@+id/reportend"
                 android:textColor="@color/red"/>
 
         </LinearLayout>
 
         <Button
+<<<<<<< HEAD
             android:id="@+id/send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -186,6 +244,17 @@
             android:padding="6dp"
             android:text="send"
             android:textSize="20sp" />
+=======
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="send"
+            android:textSize="23sp"
+            android:id="@+id/send"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="36dp"
+            android:padding="6dp"
+            android:background="@android:color/holo_blue_light"/>
+>>>>>>> master
 
     </LinearLayout >
 

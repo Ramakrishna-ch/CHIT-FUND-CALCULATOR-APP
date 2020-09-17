@@ -16,14 +16,20 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 
 
+=======
+>>>>>>> master
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     int auction;
     EditText auction_edit;
     int bit;
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     TextView bit_edit;
     Button button_calc;
     Spinner chit_edit;
@@ -31,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     int members;
     String report;
     String reportend;
+<<<<<<< HEAD
     String mesStr;
     int temp_pay;
     int total_amount;
@@ -40,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //history variable history actovity
 
     public static ArrayList<String> history = new ArrayList<String>();
+=======
+    Button send;
+    int temp_pay;
+    int total_amount;
+>>>>>>> master
 
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
@@ -47,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         Spinner chit_edit = (Spinner) findViewById(R.id.chit_amount);
         final EditText auction_edit = (EditText) findViewById(R.id.auction_amount);
+<<<<<<< HEAD
         final Spinner mem_edit = (Spinner) findViewById(R.id.members);
         final TextView bit_edit = (TextView) findViewById(R.id.bit_amount);
         Button button_calc = (Button) findViewById(R.id.calculate);
@@ -54,6 +67,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Button send = (Button) findViewById(R.id.send);
 
 
+=======
+        Spinner mem_edit = (Spinner) findViewById(R.id.members);
+        final TextView bit_edit = (TextView) findViewById(R.id.bit_amount);
+        Button button_calc = (Button) findViewById(R.id.calculate);
+        Button send = (Button) findViewById(R.id.send);
+
+>>>>>>> master
         // spinner for chit amount
 
         ArrayAdapter<CharSequence> chit_Spinner = ArrayAdapter.createFromResource(this, R.array.chit_amount, android.R.layout.simple_spinner_item);
@@ -73,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         button_calc.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
+<<<<<<< HEAD
                 String auctcheck = auction_edit.getText().toString();
                     if (!auctcheck.isEmpty()) {
                         int auction_amount;
@@ -126,6 +147,34 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     startActivity(intent);
                 }
 
+=======
+                int auction_amount;
+                auction_amount = Integer.valueOf(auction_edit.getText().toString()).intValue();
+                auction = auction_amount;
+                switch (total_amount) {
+                    case 100000:
+                        bit = 3000;
+                        break;
+                    case 50000:
+                        bit = 1500;
+                        break;
+                    case 200000:
+                        bit = 6000;
+                        break;
+                    case 20000:
+                        bit = 600;
+                        break;
+                }
+                bit_edit.setText("" + bit);
+                int payc = pay_calc();
+                summary(payc);
+
+            }
+        });
+        send.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent("android.intent.action.VIEW", Uri.fromParts("sms-body", report, null)));
+>>>>>>> master
             }
         });
     }
@@ -143,8 +192,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
                 case 3: total_amount = 20000;
                     break;
+<<<<<<< HEAD
                 case 4: total_amount = 300000;
                 break;
+=======
+>>>>>>> master
             }
         }
         else if( parent.getId() == R.id.members){
@@ -200,8 +252,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         report_view.setText(report);
         reportend_view.setText(reportend);
+<<<<<<< HEAD
         history.add(str + str2);
         mesStr = str + str2;
+=======
+>>>>>>> master
     }
 
 
