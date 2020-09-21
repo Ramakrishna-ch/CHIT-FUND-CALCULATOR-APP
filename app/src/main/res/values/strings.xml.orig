@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CHIT FUND CALCULATOR</string>
+    <string-array name="chit_amount">
+        <item>100000</item>
+<<<<<<< HEAD
+        <item>50000</item>
+        <item>200000</item>
+        <item>20000</item>
+        <item>300000</item>
+    </string-array>
+    <string-array name="members">
+        <item>20</item>
+        <item>10</item>
+    </string-array>
+=======
+        <item >50000</item>
+        <item >200000</item>
+        <item>20000</item>
+    </string-array>
+    <string-array name="members">
+    <item>20</item>
+        <item>10</item></string-array>
+>>>>>>> master
+</resources>
